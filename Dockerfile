@@ -26,6 +26,7 @@ RUN pip install -r requirements.txt
 
 COPY app.py .
 
-EXPOSE 7860
+EXPOSE 8080
+ENV GRADIO_SERVER_PORT 8080
 
-CMD gradio app.py
+CMD python app.py
